@@ -15,4 +15,6 @@ public class RegisterRequest
 
     [Required]
     public string Password { get; set; }
+    public string EmailAddress { get; set; }
+    public string PhoneNumber { get; set; }
 }

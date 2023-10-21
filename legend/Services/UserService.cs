@@ -11,10 +11,10 @@ public interface IUserService
 {
     AuthenticateResponse Authenticate(AuthenticateRequest model);
     IEnumerable<User> GetAll();
-    User GetById(int id);
+    User GetById(Guid id);
     void Register(RegisterRequest model);
-    void Update(int id, UpdateRequest model);
-    void Delete(int id);
+    void Update(Guid id, UpdateRequest model);
+    void Delete(Guid id);
 }
 
 public class UserService : IUserService
@@ -52,7 +52,7 @@ public class UserService : IUserService
         return _context.Users;
     }
 
-    public User GetById(int id)
+    public User GetById(Guid id)
     {
         return getUser(id);
     }
@@ -74,7 +74,7 @@ public class UserService : IUserService
         _context.SaveChanges();
     }
 
-    public void Update(int id, UpdateRequest model)
+    public void Update(Guid id, UpdateRequest model)
     {
         var user = getUser(id);
 
@@ -92,7 +92,7 @@ public class UserService : IUserService
         _context.SaveChanges();
     }
 
-    public void Delete(int id)
+    public void Delete(Guid id)
     {
         var user = getUser(id);
         _context.Users.Remove(user);
@@ -101,7 +101,7 @@ public class UserService : IUserService
 
     // helper methods
 
-    private User getUser(int id)
+    private User getUser(Guid id)
     {
         var user = _context.Users.Find(id);
         if (user == null) throw new KeyNotFoundException("User not found");

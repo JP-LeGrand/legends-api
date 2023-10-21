@@ -19,4 +19,16 @@ public class DataContext : DbContext
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<Address> Addresses { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        // User to Address relationship
+        modelBuilder.Entity<User>()
+            .HasMany(u => u.DeliveryAddresses)
+            .WithOne()
+            .HasForeignKey(a => a.UserId);
+
+        base.OnModelCreating(modelBuilder);
+    }
 }

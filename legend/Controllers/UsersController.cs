@@ -1,10 +1,7 @@
 ﻿namespace legend.Controllers;
 
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using legend.Authorization;
-using legend.Helpers;
 using legend.Models.Users;
 using legend.Services;
 
@@ -14,17 +11,11 @@ using legend.Services;
 public class UsersController : ControllerBase
 {
     private IUserService _userService;
-    private IMapper _mapper;
-    private readonly AppSettings _appSettings;
 
     public UsersController(
-        IUserService userService,
-        IMapper mapper,
-        IOptions<AppSettings> appSettings)
+        IUserService userService)
     {
         _userService = userService;
-        _mapper = mapper;
-        _appSettings = appSettings.Value;
     }
 
     [AllowAnonymous]
@@ -51,21 +42,21 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public IActionResult GetById(int id)
+    public IActionResult GetById(Guid id)
     {
         var user = _userService.GetById(id);
         return Ok(user);
     }
 
     [HttpPut("{id}")]
-    public IActionResult Update(int id, UpdateRequest model)
+    public IActionResult Update(Guid id, UpdateRequest model)
     {
         _userService.Update(id, model);
         return Ok(new { message = "User updated successfully" });
     }
 
     [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
+    public IActionResult Delete(Guid id)
     {
         _userService.Delete(id);
         return Ok(new { message = "User deleted successfully" });

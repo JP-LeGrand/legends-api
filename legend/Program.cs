@@ -29,6 +29,7 @@ builder.Host.ConfigureServices((hostContext, services) =>
     services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
     services.AddScoped<IJwtUtils, JwtUtils>();
     services.AddScoped<IUserService, UserService>();
+    services.AddScoped<IAddressService, AddressService>();
 });
 
 var app = builder.Build();

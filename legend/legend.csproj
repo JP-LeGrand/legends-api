@@ -25,10 +25,14 @@
     <None Remove="PayFast\" />
     <None Remove="Extensions\" />
     <None Remove="Migrations\" />
+    <None Remove="Models\Address\" />
+    <None Remove="Migrations\SqliteMigrations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PayFast\" />
     <Folder Include="Extensions\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Models\Address\" />
+    <Folder Include="Migrations\SqliteMigrations\" />
   </ItemGroup>
 </Project>
