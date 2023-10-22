@@ -21,9 +21,8 @@ public class AddressController : ControllerBase
         _addressService = addressService;
     }
 
-    [AllowAnonymous]
     [HttpPost("add")]
-    public IActionResult Register(AddAddressRequest model)
+    public IActionResult AddAddress(AddAddressRequest model)
     {
         _addressService.Add(model);
         return Ok(new { message = "Add successful" });
