@@ -3272,25 +3272,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/josephlegrand/.nuget/packages/": {}
+    "C:\\Users\\joseph.legrand\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/josephlegrand/Projects/legend/legend/legend.csproj",
+      "projectUniqueName": "C:\\Users\\joseph.legrand\\Documents\\legends-api\\legend\\legend.csproj",
       "projectName": "legend",
-      "projectPath": "/Users/josephlegrand/Projects/legend/legend/legend.csproj",
-      "packagesPath": "/Users/josephlegrand/.nuget/packages/",
-      "outputPath": "/Users/josephlegrand/Projects/legend/legend/obj/",
+      "projectPath": "C:\\Users\\joseph.legrand\\Documents\\legends-api\\legend\\legend.csproj",
+      "packagesPath": "C:\\Users\\joseph.legrand\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joseph.legrand\\Documents\\legends-api\\legend\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/josephlegrand/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\joseph.legrand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/sdk/7.0.309/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3359,6 +3365,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3367,7 +3391,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.309/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
