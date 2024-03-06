@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'legend-parfum-api'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_271F7ED46952494992147069CD1EAD59 }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE  }}
           package: .
