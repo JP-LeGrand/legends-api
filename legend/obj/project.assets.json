@@ -565,7 +565,7 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Abstractions/7.0.2": {
+      "Microsoft.IdentityModel.Abstractions/7.5.2": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
@@ -578,10 +578,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/7.0.2": {
+      "Microsoft.IdentityModel.JsonWebTokens/7.5.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "7.0.2"
+          "Microsoft.IdentityModel.Tokens": "7.5.2"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -594,10 +594,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Logging/7.0.2": {
+      "Microsoft.IdentityModel.Logging/7.5.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "7.0.2"
+          "Microsoft.IdentityModel.Abstractions": "7.5.2"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Logging.dll": {
@@ -644,10 +644,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Tokens/7.0.2": {
+      "Microsoft.IdentityModel.Tokens/7.5.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Logging": "7.0.2"
+          "Microsoft.IdentityModel.Logging": "7.5.2"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
@@ -1018,11 +1018,11 @@
           }
         }
       },
-      "System.IdentityModel.Tokens.Jwt/7.0.2": {
+      "System.IdentityModel.Tokens.Jwt/7.5.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "7.0.2",
-          "Microsoft.IdentityModel.Tokens": "7.0.2"
+          "Microsoft.IdentityModel.JsonWebTokens": "7.5.2",
+          "Microsoft.IdentityModel.Tokens": "7.5.2"
         },
         "compile": {
           "lib/net6.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -2142,10 +2142,10 @@
         "microsoft.identity.client.extensions.msal.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Abstractions/7.0.2": {
-      "sha512": "PIA7dP6J18SXsaO8VQuXH/sr7rM7XQcjj6+gikG30Cpp+7i3xhEGqAMxzMScqs7HvYH9VI7f8Ey9U6n765Vzcg==",
+    "Microsoft.IdentityModel.Abstractions/7.5.2": {
+      "sha512": "xXFP4PUcI/l4n3hpw4TXbvONNTQ9WflyMxUx03qNJXSd7dVtxbFrL+B9+IevMwzvktZjTVfMdDlzQoTzdtN1bA==",
       "type": "package",
-      "path": "microsoft.identitymodel.abstractions/7.0.2",
+      "path": "microsoft.identitymodel.abstractions/7.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2161,14 +2161,14 @@
         "lib/net8.0/Microsoft.IdentityModel.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
-        "microsoft.identitymodel.abstractions.7.0.2.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.7.5.2.nupkg.sha512",
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.JsonWebTokens/7.0.2": {
-      "sha512": "Hr8IOcblQu3Gm48tc2CfD/DDSA8bP6UnUJCApZq9p72nUPIIBu+1vXqcSp5SQ/dpQOHBmQTAYJ3FiTWyuMOl1Q==",
+    "Microsoft.IdentityModel.JsonWebTokens/7.5.2": {
+      "sha512": "gH3c88+YdT5QI6Rw2nnwjDUxzLgPPPbjMvUwvJrITyNAV3L5aswqxKIlmyQhaqltjGBGrMsCZCKwampWEMDN2w==",
       "type": "package",
-      "path": "microsoft.identitymodel.jsonwebtokens/7.0.2",
+      "path": "microsoft.identitymodel.jsonwebtokens/7.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2184,14 +2184,14 @@
         "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "microsoft.identitymodel.jsonwebtokens.7.0.2.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.7.5.2.nupkg.sha512",
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/7.0.2": {
-      "sha512": "Vq8MWx7liJ2acVZg+4d0/PJyEqTl8x9Zzd7b3yu1gLwEwSUwCNuMlUtgmkiiD6VJhlsD356iH1gkdPmVgIYBIA==",
+    "Microsoft.IdentityModel.Logging/7.5.2": {
+      "sha512": "FpMJ2i1e8Z+1rAchYQiawk0ChwYv6CNtCQDtMzwzkZtUWQYmkrkLXzl3qniOT8FFQck7bPKhQJY6nU7P7tojwQ==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/7.0.2",
+      "path": "microsoft.identitymodel.logging/7.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2207,7 +2207,7 @@
         "lib/net8.0/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.7.0.2.nupkg.sha512",
+        "microsoft.identitymodel.logging.7.5.2.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
@@ -2253,10 +2253,10 @@
         "microsoft.identitymodel.protocols.openidconnect.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/7.0.2": {
-      "sha512": "C/D7rYAw9BVcmlxS5QYLhrs1SVsFCaB+dOS/eyNFeqQGYBdU6a1Qb5IErakHc34iFTuyth2kfgry6juwQZEe/Q==",
+    "Microsoft.IdentityModel.Tokens/7.5.2": {
+      "sha512": "VFLS4Ajy5jadM/YV9x3FA4pHHwbEWTjkbN/RtShqVH8eI8j6UDg5522ogTx1iMLJKQdL9QbfxXx4d1+w1eCDgQ==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/7.0.2",
+      "path": "microsoft.identitymodel.tokens/7.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2272,7 +2272,7 @@
         "lib/net8.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.7.0.2.nupkg.sha512",
+        "microsoft.identitymodel.tokens.7.5.2.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
@@ -2654,10 +2654,10 @@
         "version.txt"
       ]
     },
-    "System.IdentityModel.Tokens.Jwt/7.0.2": {
-      "sha512": "szV62kSg47xg7ZL8wbpR90j+han0YG+rnK4S30xPEkMQHRkQTz30mir2xMkEclaiLNVuKozaNne+sptoSwelGA==",
+    "System.IdentityModel.Tokens.Jwt/7.5.2": {
+      "sha512": "taMjs3z9+tTYNhdD5g5XU89gMcqX7PSI6oji7yZXK8E4T1XjsZR5yDLdIqC1PVKYL5FAlrNWBNBaLshuESYHlw==",
       "type": "package",
-      "path": "system.identitymodel.tokens.jwt/7.0.2",
+      "path": "system.identitymodel.tokens.jwt/7.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2673,7 +2673,7 @@
         "lib/net8.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.7.0.2.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.7.5.2.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
@@ -3268,28 +3268,23 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.12",
       "Swashbuckle.AspNetCore >= 6.2.3",
-      "System.IdentityModel.Tokens.Jwt >= 7.0.2"
+      "System.IdentityModel.Tokens.Jwt >= 7.5.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joseph.legrand\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\joseph.legrand\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joseph.legrand\\Documents\\legends-api\\legend\\legend.csproj",
+      "projectUniqueName": "C:\\Users\\joseph.legrand\\source\\repos\\legends-api\\legend\\legend.csproj",
       "projectName": "legend",
-      "projectPath": "C:\\Users\\joseph.legrand\\Documents\\legends-api\\legend\\legend.csproj",
+      "projectPath": "C:\\Users\\joseph.legrand\\source\\repos\\legends-api\\legend\\legend.csproj",
       "packagesPath": "C:\\Users\\joseph.legrand\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joseph.legrand\\Documents\\legends-api\\legend\\obj\\",
+      "outputPath": "C:\\Users\\joseph.legrand\\source\\repos\\legends-api\\legend\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\joseph.legrand\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3297,6 +3292,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3309,6 +3305,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3351,7 +3352,7 @@
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
-            "version": "[7.0.2, )"
+            "version": "[7.5.2, )"
           }
         },
         "imports": [
@@ -3365,24 +3366,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -3391,7 +3374,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14\\RuntimeIdentifierGraph.json"
       }
     }
   }
