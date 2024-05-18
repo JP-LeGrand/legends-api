@@ -8,6 +8,7 @@ namespace legend.Services
     public interface IAddressService
     {
         IEnumerable<Address> GetAll();
+        IEnumerable<Address> GetUserAddress(Guid userId);
         Address GetById(Guid id);
         void Add(AddAddressRequest model);
         void Update(Guid id, UpdateAddressRequest model);
@@ -15,7 +16,7 @@ namespace legend.Services
     }
 
     public class AddressService : IAddressService
-	{
+    {
         private DataContext _context;
         private readonly IMapper _mapper;
 
@@ -71,6 +72,11 @@ namespace legend.Services
             var address = _context.Addresses.Find(id);
             if (address == null) throw new KeyNotFoundException("Address not found");
             return address;
+        }
+
+        IEnumerable<Address> IAddressService.GetUserAddress(Guid userId)
+        {
+            return _context.Addresses.Where(a => a.UserId == userId);
         }
     }
 }

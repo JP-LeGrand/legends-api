@@ -6,6 +6,7 @@ using legend.Authorization;
 using legend.Entities;
 using legend.Helpers;
 using legend.Models.Users;
+using Microsoft.EntityFrameworkCore;
 
 public interface IUserService
 {
@@ -103,7 +104,10 @@ public class UserService : IUserService
 
     private User getUser(Guid id)
     {
-        var user = _context.Users.Find(id);
+        var user = _context.Users
+            .Include(user => user.DeliveryAddresses)
+            .FirstOrDefault(u => u.Id == id);
+
         if (user == null) throw new KeyNotFoundException("User not found");
         return user;
     }

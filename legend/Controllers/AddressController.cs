@@ -1,12 +1,10 @@
 ﻿namespace legend.Controllers;
 
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using legend.Authorization;
-using legend.Helpers;
 using legend.Models.Address;
 using legend.Services;
+using Microsoft.AspNetCore.Http;
 
 [Authorize]
 [ApiController]
@@ -29,11 +27,14 @@ public class AddressController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAll()
+    public IActionResult GetUserAddresses()
     {
-        var addresses = _addressService.GetAll();
+        var user = HttpContext.GetUserIdFromContext();
+
+        var addresses = _addressService.GetUserAddress(user.Id);
         return Ok(addresses);
     }
+
 
     [HttpGet("{id}")]
     public IActionResult GetById(Guid id)
