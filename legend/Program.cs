@@ -30,6 +30,7 @@ builder.Host.ConfigureServices((hostContext, services) =>
     services.AddScoped<IJwtUtils, JwtUtils>();
     services.AddScoped<IUserService, UserService>();
     services.AddScoped<IAddressService, AddressService>();
+    services.AddScoped<IOrderService, OrderService>();
 });
 
 var app = builder.Build();

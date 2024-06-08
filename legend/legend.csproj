@@ -30,7 +30,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PayFast\" />
-    <Folder Include="Extensions\" />
     <Folder Include="Migrations\" />
     <Folder Include="Models\Address\" />
     <Folder Include="Migrations\SqliteMigrations\" />
