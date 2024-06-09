@@ -39,5 +39,15 @@
             return Ok(new { Message = "Order status updated successfully" });
         }
 
+        [HttpGet]
+        public IActionResult GetUserOrders()
+        {
+            var user = HttpContext.GetUserIdFromContext();
+
+            var orders = _orderService.GetUserOrders(user.Id);
+
+            return Ok(orders);
+        }
+
     }
 }

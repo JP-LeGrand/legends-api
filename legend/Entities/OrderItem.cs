@@ -13,7 +13,6 @@ namespace legend.Entities
         public decimal Price { get; set; }
        
         // Navigation property for order
-        public Order? Order { get; set; }
         public Product? Product { get; set; }
     }
 

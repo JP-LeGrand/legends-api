@@ -1,6 +1,7 @@
 ﻿using legend.Entities;
 using legend.Entities.Enums;
 using legend.Helpers;
+using Microsoft.EntityFrameworkCore;
 
 namespace legend.Services
 {
@@ -10,6 +11,8 @@ namespace legend.Services
         Task<Guid> PlaceOrder(Guid userId, Order orderItems);
 
         Task UpdateOrderStatusAsync(Guid orderId, OrderStatus newStatus);
+
+        IEnumerable<Order> GetUserOrders(Guid userId);
     }
 
     public class OrderService : IOrderService
@@ -85,6 +88,14 @@ namespace legend.Services
 
             product.StockQuantity -= quantity;
             await _context.SaveChangesAsync();
+        }
+
+        public IEnumerable<Order> GetUserOrders(Guid userId)
+        {
+            return _context.Orders
+                .Include(order => order.shippingDetails)
+                .Include(order => order.OrderItems)
+                .Where(a => a.UserId == userId);
         }
     }
 }
