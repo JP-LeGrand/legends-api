@@ -4,6 +4,7 @@
     using legend.Authorization;
     using legend.Services;
     using legend.Entities;
+    using legend.Entities.Enums;
 
     [Authorize]
     [ApiController]
@@ -28,5 +29,15 @@
 
             return Ok(new { OrderId = orderId });
         }
+
+        [HttpPost("update-order-status")]
+        public async Task<IActionResult> UpdateOrderStatus(Guid orderId)
+        {
+
+            await _orderService.UpdateOrderStatusAsync(orderId, OrderStatus.Processed);
+
+            return Ok(new { Message = "Order status updated successfully" });
+        }
+
     }
 }

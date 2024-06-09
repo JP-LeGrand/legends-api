@@ -9,7 +9,7 @@ namespace legend.Services
 
         Task<Guid> PlaceOrder(Guid userId, Order orderItems);
 
-        Task UpdateOrderStatusAsync(int orderId, OrderStatus newStatus);
+        Task UpdateOrderStatusAsync(Guid orderId, OrderStatus newStatus);
     }
 
     public class OrderService : IOrderService
@@ -35,7 +35,7 @@ namespace legend.Services
             return order.OrderId;
         }
 
-        public async Task UpdateOrderStatusAsync(int orderId, OrderStatus newStatus)
+        public async Task UpdateOrderStatusAsync(Guid orderId, OrderStatus newStatus)
         {
             var order = await _context.Orders.FindAsync(orderId);
             if (order == null)
