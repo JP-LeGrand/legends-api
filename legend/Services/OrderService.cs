@@ -95,7 +95,7 @@ namespace legend.Services
             return _context.Orders
                 .Include(order => order.shippingDetails)
                 .Include(order => order.OrderItems)
-                .Where(a => a.UserId == userId);
+                .Where(order => order.UserId == userId && order.Status == OrderStatus.Processed);
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 
 namespace legend.PayFast
 {
-	public class PayFastNotify : PayFastBase
+    public class PayFastNotify : PayFastBase
     {
         #region Fields
 
@@ -427,25 +427,23 @@ namespace legend.PayFast
 
         #region Methods
 
-        public void FromFormCollection(IEnumerable<KeyValuePair<string, string>> nameValueCollection)
+        public void FromFormCollection(IFormCollection formData)
         {
-            if (nameValueCollection == null || nameValueCollection.Count() < 1)
+            if (formData == null || formData.Count == 0)
             {
                 return;
             }
 
-            foreach (KeyValuePair<string, string> keyValuePair in nameValueCollection)
+            foreach (var key in formData.Keys)
             {
-                if (keyValuePair.Key == nameof(this.signature))
+                var value = formData[key];
+                if (!string.IsNullOrEmpty(value))
                 {
-                    this.signature = keyValuePair.Value;
-
-                    continue;
+                    this.properties[key] = value;
                 }
-
-                this.properties.AddOrUpdate(key: keyValuePair.Key, value: keyValuePair.Value);
             }
         }
+
 
         public string GetCalculatedSignature()
         {

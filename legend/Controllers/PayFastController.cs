@@ -1,6 +1,8 @@
 ﻿namespace legend.Controllers
 {
+    using legend.Entities.Enums;
     using legend.PayFast;
+    using legend.Services;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Options;
 
@@ -12,22 +14,33 @@
 
         private readonly PayFastSettings payFastSettings;
         private readonly ILogger logger;
+        private readonly IOrderService _orderService;
 
         #endregion Fields
 
         #region Constructor
 
-        public PayFastController(IOptions<PayFastSettings> payFastSettings, ILogger<PayFastController> logger)
+        public PayFastController(
+            IOptions<PayFastSettings> payFastSettings,
+            ILogger<PayFastController> logger,
+            IOrderService orderService)
         {
             this.payFastSettings = payFastSettings.Value;
             this.logger = logger;
+            this._orderService = orderService;
         }
 
         #endregion Constructor
 
         [HttpPost]
-        public async Task<ActionResult> Notify(PayFastNotify payFastNotifyViewModel)
+        public async Task<ActionResult> Notify()
         {
+            var formData = await Request.ReadFormAsync();
+
+            var payFastNotifyViewModel = new PayFastNotify();
+
+            // Populate PayFastNotify object with form data
+            payFastNotifyViewModel.FromFormCollection(formData);
             payFastNotifyViewModel.SetPassPhrase(this.payFastSettings.PassPhrase);
 
             var calculatedSignature = payFastNotifyViewModel.GetCalculatedSignature();
@@ -54,6 +67,12 @@
                 var dataValidationResult = await payfastValidator.ValidateData();
 
                 this.logger.LogInformation($"Data Validation Result: {dataValidationResult}");
+
+                Guid.TryParse(payFastNotifyViewModel.item_name, out Guid orderId);
+
+                await _orderService.UpdateOrderStatusAsync(orderId, OrderStatus.Processed);
+
+                this.logger.LogInformation($"Update Order {orderId} to Status: {OrderStatus.Processed}");
             }
 
             if (payFastNotifyViewModel.payment_status == PayFastStatics.CancelledPaymentConfirmation)

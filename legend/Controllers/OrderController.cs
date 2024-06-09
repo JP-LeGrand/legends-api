@@ -30,6 +30,7 @@
             return Ok(new { OrderId = orderId });
         }
 
+        //TODO: Try this way as well
         [HttpPost("update-order-status")]
         public async Task<IActionResult> UpdateOrderStatus(Guid orderId)
         {
