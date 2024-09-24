@@ -10,7 +10,8 @@ var env = builder.Environment;
 
 // use sql server db in production and sqlite db in development
 if (env.IsProduction())
-    builder.Services.AddDbContext<DataContext>();
+    //builder.Services.AddDbContext<DataContext>();
+    builder.Services.AddDbContext<DataContext, SqliteDataContext>();
 else
     builder.Services.AddDbContext<DataContext, SqliteDataContext>();
 
