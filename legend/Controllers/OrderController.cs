@@ -18,6 +18,7 @@
             _orderService = orderService;
         }
 
+        [AllowAnonymous]
         [HttpPost("place-order")]
         public async Task<IActionResult> PlaceOrder([FromBody] Order order)
         {
