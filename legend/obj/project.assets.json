@@ -3272,27 +3272,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joseph.legrand\\.nuget\\packages\\": {}
+    "/Users/josephlegrand/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joseph.legrand\\source\\repos\\legends-api\\legend\\legend.csproj",
+      "projectUniqueName": "/Users/josephlegrand/Projects/legend/legend/legend.csproj",
       "projectName": "legend",
-      "projectPath": "C:\\Users\\joseph.legrand\\source\\repos\\legends-api\\legend\\legend.csproj",
-      "packagesPath": "C:\\Users\\joseph.legrand\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joseph.legrand\\source\\repos\\legends-api\\legend\\obj\\",
+      "projectPath": "/Users/josephlegrand/Projects/legend/legend/legend.csproj",
+      "packagesPath": "/Users/josephlegrand/.nuget/packages/",
+      "outputPath": "/Users/josephlegrand/Projects/legend/legend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\joseph.legrand\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/josephlegrand/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "/usr/local/share/dotnet/sdk/7.0.309/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3305,11 +3303,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3374,7 +3367,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.309/RuntimeIdentifierGraph.json"
+>>>>>>> 28aca1afded7b41dd5512407e3c16f4025bbfa85
       }
     }
   }
