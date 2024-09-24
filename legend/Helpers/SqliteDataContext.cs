@@ -9,6 +9,6 @@ public class SqliteDataContext : DataContext
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
         // connect to sqlite database
-        options.UseSqlite($"Data Source={Path.Combine(AppContext.BaseDirectory, Configuration.GetConnectionString("WebApiDatabase"))}");
+        options.UseSqlite(Configuration.GetConnectionString("WebApiDatabase"));
     }
 }
